@@ -7,62 +7,66 @@
 //
 
 import UIKit
+import CoreFoundation
 
 class ViewController: UIViewController {
-    var rest: Bool = true
-    
+    var startTime:CFAbsoluteTime = 0.0
     override func viewDidLoad() {
         super.viewDidLoad()
-       //view.backgroundColor=UIColor.red
         changeBackgroundColor()
-        
-        
     }
 
     @IBAction func clickYellowButton(_ sender: Any) {
+        print("clickYellowButton=\(view.backgroundColor==UIColor.yellow)")
         if(view.backgroundColor==UIColor.yellow){
-            viewtext.text = "잘했어"
+            viewText.text = "잘했어"
+            checkTime()
         }else{
-            viewtext.text = "다시해봐"
+            viewText.text = "다시해봐"
         }
-        viewtext.text = "바탕화면 색에 해당하는 버튼을 눌러봐"
-        changeBackgroundColor()
+        
     }
     
     @IBAction func clickRadButton(_ sender: Any) {
+        print("clickRadButton=\(view.backgroundColor==UIColor.red)")
         if(view.backgroundColor==UIColor.red){
-            viewtext.text = "잘했어"
+            viewText.text = "잘했어"
+            checkTime()
         }else{
-            viewtext.text = "다시해봐"
+            viewText.text = "다시해봐"
         }
-        viewtext.text = "바탕화면 색에 해당하는 버튼을 눌러봐"
-        changeBackgroundColor()
+        
     }
     
     
     @IBAction func clickBlueButton(_ sender: Any) {
+        print("clickBlueButton=\(view.backgroundColor==UIColor.blue)")
         if(view.backgroundColor==UIColor.blue){
-            viewtext.text = "잘했어"
+            viewText.text = "잘했어"
+            checkTime()
         }else{
-            viewtext.text = "다시해봐"
+            viewText.text = "다시해봐"
         }
-        viewtext.text = "바탕화면 색에 해당하는 버튼을 눌러봐"
-        changeBackgroundColor()
+        
     }
     
     @IBAction func clickWhiteButton(_ sender: Any) {
+        print("clickWhiteButton=\(view.backgroundColor==UIColor.white)")
         if(view.backgroundColor==UIColor.white){
-            viewtext.text = "잘했어"
+            viewText.text = "잘했어"
+            checkTime()
         }else{
-            viewtext.text = "다시해봐"
+            viewText.text = "다시해봐"
         }
-        viewtext.text = "바탕화면 색에 해당하는 버튼을 눌러봐"
-        changeBackgroundColor()
+        
+        
     }
     
-    @IBOutlet weak var viewtext: UILabel!
+    
+    @IBOutlet weak var viewText: UITextField!
     
     func changeBackgroundColor(){
+     //   viewText.text = "바탕화면 색에 해당하는 버튼을 눌러봐"
         let colornum = Int.random(in: 0 ... 3)
         if(colornum==0){
             view.backgroundColor=UIColor.red
@@ -75,6 +79,11 @@ class ViewController: UIViewController {
         }
     
     }
+    
+    func checkTime(){    
+        changeBackgroundColor()
+    }
+    
     
 }
 
