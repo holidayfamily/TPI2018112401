@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         }else{
             viewText.text = "다시해봐"
         }
-        
     }
     
     @IBAction func clickRadButton(_ sender: Any) {
