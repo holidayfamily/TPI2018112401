@@ -11,7 +11,7 @@ import CoreFoundation
 
 class ViewController: UIViewController {
     var startTime:CFAbsoluteTime = 0.0
-    
+    var countRrightAnswer:Int = 0
     
     @IBOutlet weak var textLable: UILabel!
     override func viewDidLoad() {
@@ -28,18 +28,22 @@ class ViewController: UIViewController {
         case "white":
             if(view.backgroundColor == UIColor.white){
                 checkflag = true
+                countRrightAnswer += countRrightAnswer
             }
         case "blue":
             if(view.backgroundColor == UIColor.blue){
                 checkflag = true
+                countRrightAnswer += countRrightAnswer
             }
         case "red":
             if(view.backgroundColor == UIColor.red){
                 checkflag = true
+                countRrightAnswer += countRrightAnswer
             }
         case "yellow":
             if(view.backgroundColor == UIColor.yellow){
                 checkflag = true
+                countRrightAnswer += countRrightAnswer
             }
         default:
             checkflag = false
@@ -56,7 +60,9 @@ class ViewController: UIViewController {
 
     
     func changeBackgroundColor(){
-        
+        if(countRrightAnswer > 5){
+            
+        }
      //   textLable.text = "바탕화면 색에 해당하는 버튼을 눌러봐"
         let colornum = Int.random(in: 0 ... 3)
         if(colornum == 0){
@@ -69,6 +75,32 @@ class ViewController: UIViewController {
             view.backgroundColor = UIColor.yellow
         }
     }
+    
+    func nextPage(){
+        let alertController = UIAlertController(title: "LEVEL UP", message: "5번 정답을 맞추셨군요. 다음 단계로 이동하시겠습니까?", preferredStyle: .alert)
+        
+        let staylevel = UIAlertAction(title: "취소", style: .destructive) { (result : UIAlertAction) -> Void in
+            
+            print("취소")
+            
+        }
+        
+        let nextLevel = UIAlertAction(title: "확인", style: .default) { (result : UIAlertAction) -> Void in
+            
+            let testNumberViewC = self.storyboard?.instantiateViewController(withIdentifier: “testNumber”)
+            testNumberViewC?.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+            self.present(testNumberViewC!, animated: true, completion: nil)
+
+            
+        }
+        
+        alertController.addAction(staylevel)
+        alertController.addAction(nextLevel)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+        
+     }
     
     func checkTime(){
         startTime = CFAbsoluteTimeGetCurrent()

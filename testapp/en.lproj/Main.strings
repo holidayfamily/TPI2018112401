@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "파랑"; ObjectID = "AF9-wv-wfJ"; */
+"AF9-wv-wfJ.normalTitle" = "파랑";
+
+/* Class = "UILabel"; text = "바탕화면 색에 해당하는 버튼을 눌러봐"; ObjectID = "KQl-js-92h"; */
+"KQl-js-92h.text" = "바탕화면 색에 해당하는 버튼을 눌러봐";
+
+/* Class = "UIButton"; normalTitle = "빨강"; ObjectID = "Qmr-RL-B9Y"; */
+"Qmr-RL-B9Y.normalTitle" = "빨강";
+
+/* Class = "UIButton"; normalTitle = "흰색"; ObjectID = "b4q-co-1N8"; */
+"b4q-co-1N8.normalTitle" = "흰색";
+
+/* Class = "UIButton"; normalTitle = "노랑"; ObjectID = "xWT-fm-Zdt"; */
+"xWT-fm-Zdt.normalTitle" = "노랑";
