@@ -13,5 +13,17 @@ override func viewDidLoad() {
  
     }
 
+    @IBOutlet weak var numberNum: UILabel!
+    
+    @IBOutlet weak var numberText: UILabel!
+    
+    @IBAction func checkanswer(_ sender: Any) {
+        
+    }
+    
+    func setContent(){
+        numberNum.text = ""
+        numberText.text = ""
+    }
 }
 
