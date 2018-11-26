@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import CoreFoundation
+
 class ViewController2: UIViewController {
 override func viewDidLoad() {
         super.viewDidLoad()
- 
+      //  nextStepButton.isHidden = true
+
     }
     @IBOutlet weak var commentText: UITextView!
  
@@ -53,7 +56,7 @@ override func viewDidLoad() {
     func setContent(){
         if(countRightAnswer > 4){
             nextPage()
-            nextStepButton.isHidden = false
+          //  nextStepButton.isHidden = false
         }
          num1 = Int.random(in:0...6)
          num2 = Int.random(in:0...6)

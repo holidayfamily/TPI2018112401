@@ -133,7 +133,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IX-or-ncy">
-                                <rect key="frame" x="56" y="528" width="46" height="30"/>
+                                <rect key="frame" x="56" y="481" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="예"/>
@@ -142,7 +142,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwg-dM-U5P">
-                                <rect key="frame" x="246" y="528" width="55" height="38"/>
+                                <rect key="frame" x="246" y="481" width="55" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="아니요"/>
@@ -165,13 +165,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VBG-kV-Lup">
-                                <rect key="frame" x="142" y="588" width="69" height="45"/>
+                                <rect key="frame" x="138" y="528" width="69" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="NEXT"/>
                                 <connections>
-                                    <action selector="nextStepButton:" destination="gh9-xa-HcH" eventType="touchUpInside" id="xEV-ap-SFA"/>
-                                    <segue destination="9qw-cx-jZo" kind="show" id="i2N-SK-ps0"/>
+                                    <segue destination="9qw-cx-jZo" kind="show" id="scJ-GB-SLV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -180,8 +179,7 @@
                     </view>
                     <connections>
                         <outlet property="commentText" destination="MTE-dn-NYm" id="dxJ-GO-n3V"/>
-                        <outlet property="nexgtStepButton" destination="Zqa-hu-BgV" id="Ole-Bt-FiI"/>
-                        <outlet property="nextStepButton" destination="VBG-kV-Lup" id="TKb-xn-4Cz"/>
+                        <outlet property="nextStepButton" destination="VBG-kV-Lup" id="KXx-ec-IEr"/>
                         <outlet property="numberNum" destination="FG3-ep-6RI" id="lea-Lr-xHT"/>
                         <outlet property="numberText" destination="4KR-nB-Znq" id="iqT-5t-qah"/>
                     </connections>
@@ -221,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nZ-VX-BII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1370" y="-421"/>
+            <point key="canvasLocation" x="1332" y="-421"/>
         </scene>
     </scenes>
 </document>
