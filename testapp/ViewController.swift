@@ -12,7 +12,7 @@ import CoreFoundation
 class ViewController: UIViewController {
     var startTime:CFAbsoluteTime = 0.0
     var countRightAnswer:Int = 0
-    
+    var bgcolorDic = [0:UIColor.white,1:UIColor.blue,2:UIColor.red,3:UIColor.yellow]
     @IBOutlet weak var textLable: UILabel!
     override func viewDidLoad() {
         nextStepButton.isHidden = true
@@ -25,34 +25,15 @@ class ViewController: UIViewController {
 
     @IBAction func clickButton(_ sender: UIButton) {
         
-        let buttonid:String = sender.restorationIdentifier!
+        let buttonid:Int = Int(sender.restorationIdentifier!)!
         var checkflag:Bool = false
-        switch buttonid {
-        case "white":
-            if(view.backgroundColor == UIColor.white){
-                checkflag = true
-                countRightAnswer += 1
-            }
-        case "blue":
-            if(view.backgroundColor == UIColor.blue){
-                checkflag = true
-                countRightAnswer += 1
-            }
-        case "red":
-            if(view.backgroundColor == UIColor.red){
-                checkflag = true
-                countRightAnswer += 1
-            }
-        case "yellow":
-            if(view.backgroundColor == UIColor.yellow){
-                checkflag = true
-                countRightAnswer += 1
-            }
-        default:
-            checkflag = false
+        if(bgcolorDic[buttonid]==view.backgroundColor){
+            checkflag = true
         }
+
         if(checkflag){
             textLable.text = "잘했어 다시한번 눌러봐"
+            countRightAnswer += 1
         }else{
             textLable.text = "다시 눌러보자"
         }
@@ -62,25 +43,15 @@ class ViewController: UIViewController {
 
     
     func changeBackgroundColor(){
-        if(countRightAnswer > 5){
+        if(countRightAnswer > 4){
             nextPage()
             nextStepButton.isHidden = false
         }
-     //   textLable.text = "바탕화면 색에 해당하는 버튼을 눌러봐"
-        let colornum = Int.random(in: 0 ... 3)
-        if(colornum == 0){
-            view.backgroundColor = UIColor.red
-        } else if(colornum == 1){
-            view.backgroundColor = UIColor.blue
-        } else if (colornum == 2) {
-            view.backgroundColor = UIColor.white
-        }else {
-            view.backgroundColor = UIColor.yellow
-        }
+   
+        let colornum = Int.random(in: 0...3)
+        view.backgroundColor = bgcolorDic[colornum]
+
     }
-    
-    
-    //under source code don't useded just referencd
     
     func nextPage(){
         
@@ -89,28 +60,8 @@ class ViewController: UIViewController {
         let staylevel = UIAlertAction(title: "확인", style: .destructive) { (result : UIAlertAction) -> Void in
            
         }
-//
-//        let nextLevel = UIAlertAction(title: "확인", style: .default) { (result : UIAlertAction) -> Void in
-//
-//
-//        }
-//
         alertController.addAction(staylevel)
-//        alertController.addAction(nextLevel)
-        
         self.present(alertController, animated: true, completion: nil)
-    }
-    
-    func checkTime(){
-        startTime = CFAbsoluteTimeGetCurrent()
-        var flag = true
-        while(flag){
-            let timeGab = CFAbsoluteTimeGetCurrent() - startTime
-            if(timeGab>2){
-                flag=false
-            }
-        }
-        changeBackgroundColor()
     }
     
 }
