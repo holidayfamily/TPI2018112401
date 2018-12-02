@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var bgcolorDic = [0:UIColor.white,1:UIColor.blue,2:UIColor.red,3:UIColor.yellow]
     @IBOutlet weak var textLable: UILabel!
     override func viewDidLoad() {
+        
         nextStepButton.isHidden = true
         super.viewDidLoad()
         changeBackgroundColor()
