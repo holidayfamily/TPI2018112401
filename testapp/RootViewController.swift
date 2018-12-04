@@ -13,21 +13,28 @@ class RootViewController: UIViewController {
     let info = UserDefaults.standard
     
     @IBOutlet weak var userNaleLabel: UILabel!
+    @IBOutlet var inputNameButton: UIButton!
     
+    @IBOutlet var staratPractict: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        inputNameButton.isHidden = true
+        staratPractict.isHidden = true
         checkname()
     }
     func checkname(){
         
         let name = info.string(forKey: "Name")
-        print("name is \(name)")
+        let vistCount = info.string(forKey: "vistCount")
         if(name == nil || name == ""){
-            print("go input name controller")
-            let inputview = InputNameController()
-        self.navigationController?.pushViewController(inputview, animated: true)
+              userNaleLabel.text = "안녕하세요. 처음 이군요 이름을등록해 주세요"
+            inputNameButton.isHidden = false
         }else{
-            userNaleLabel.text = name ?? "" + "님 안녕하세요."
+            userNaleLabel.text = "\(String(describing: name))님 안녕하세요.\(String(describing: vistCount))번째 훈련입니다."
+ 
+            staratPractict.isHidden = false
+            
+            
         }
         
     }
