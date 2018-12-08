@@ -10,18 +10,33 @@ import UIKit
 
 class InputNameController: UIViewController{
   
-    @IBOutlet var nameLabel: UILabel!
-    let info = UserDefaults.standard
-    @IBOutlet var inputName: UITextField!
-    @IBOutlet var inputButton: UIButton!
+    @IBOutlet var nameText: UITextField!
+    
+    @IBOutlet var noticLavel: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-    @IBAction func inputName(_ sender: Any) {
-        let nameValue = inputName.text
-        info.set(nameValue, forKey: "Name")
-        info.set(0, forKey: "vistCount")
+    
+    @IBAction func inputButton(_ sender: Any) {
+        print("input button")
+        
+                let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
+                let plist = path.strings(byAppendingPaths: ["data.plist"]) [0]
+        
+                let data = NSMutableDictionary(contentsOfFile: plist)
+                let nameValue = nameText.text
+                let name = data?.value(forKey:"Name") as? String
+                if let _name = name{
+                    print(_name)
+                }
+        
+                print("\(nameValue)")
+                data?.setValue(nameValue, forKey: "Name")
+                data?.setValue(0, forKey: "VistCount")
+        
+                print("\(data?.value(forKey: "VistCount"))")
+                data?.write(toFile: plist, atomically: true)
+        
     }
     
 }
