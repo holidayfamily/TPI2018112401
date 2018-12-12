@@ -18,25 +18,23 @@ class InputNameController: UIViewController{
     }
     
     @IBAction func inputButton(_ sender: Any) {
-        print("input button")
-        
-                let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
-                let plist = path.strings(byAppendingPaths: ["data.plist"]) [0]
-        
-                let data = NSMutableDictionary(contentsOfFile: plist)
-                let nameValue = nameText.text
-                let name = data?.value(forKey:"Name") as? String
-                if let _name = name{
-                    print(_name)
-                }
-        
-                print("\(nameValue)")
-                data?.setValue(nameValue, forKey: "Name")
-                data?.setValue(0, forKey: "VistCount")
-        
-                print("\(data?.value(forKey: "VistCount"))")
-                data?.write(toFile: plist, atomically: true)
-        
+      
+        let path = Bundle.main.path(forResource: "data", ofType:"plist")
+        let data = NSMutableDictionary(contentsOfFile: path!)
+       
+        let nameValue = nameText.text
+//        let alertController = UIAlertController(title: "LEVEL UP", message: path, preferredStyle: .alert)
+//
+//        let staylevel = UIAlertAction(title: "확인", style: .destructive) { (result : UIAlertAction) -> Void in
+//
+//        }
+//        alertController.addAction(staylevel)
+//        self.present(alertController, animated: true, completion: nil)
+    
+
+        data?.setValue(nameValue, forKey: "Name")
+        data?.setValue(0, forKey: "VistCount")
+        data?.write(toFile: path!, atomically: true)
     }
     
 }
