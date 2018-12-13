@@ -86,7 +86,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="gh9-xa-HcH" kind="presentation" modalPresentationStyle="fullScreen" id="MxD-Qg-hQo"/>
+                                    <segue destination="gh9-xa-HcH" kind="show" id="MxD-Qg-hQo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -163,7 +163,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="NEXT"/>
                                 <connections>
-                                    <segue destination="LR4-B3-3bP" kind="show" id="EGh-dP-5Np"/>
+                                    <segue destination="LR4-B3-3bP" kind="show" id="99T-vT-BCS"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="한글로 나오는 글자와 써진 글자가 같으면 예 다르면 아니오 를 클릭하세요" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MTE-dn-NYm">
@@ -348,15 +348,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="화면에 나오는 숫자를 큰 숫자 순서대로  눌러 주세요" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="v3a-Ys-UYY">
-                                <rect key="frame" x="16" y="44" width="275" height="68"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="6hd-hY-joa"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="secound" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Dx-vY-vbV">
                                 <rect key="frame" x="158" y="252" width="70" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -411,12 +402,22 @@
                                     <action selector="clicknum:" destination="LR4-B3-3bP" eventType="touchUpInside" id="ga0-JI-OOI"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="화면에 나오는 숫자를 작은 숫자 순서대로  눌러 주세요" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="v3a-Ys-UYY">
+                                <rect key="frame" x="23" y="61" width="275" height="78"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="38y-za-lD4"/>
+                                    <constraint firstAttribute="height" constant="78" id="eDY-Yv-kXm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="QbD-Ny-bQR" firstAttribute="trailing" secondItem="v3a-Ys-UYY" secondAttribute="trailing" constant="29" id="EYp-u3-mwn"/>
-                            <constraint firstItem="v3a-Ys-UYY" firstAttribute="top" secondItem="QbD-Ny-bQR" secondAttribute="top" constant="24" id="bHC-BT-RQf"/>
-                            <constraint firstItem="v3a-Ys-UYY" firstAttribute="leading" secondItem="QbD-Ny-bQR" secondAttribute="leading" constant="16" id="zXK-wN-etr"/>
+                            <constraint firstItem="v3a-Ys-UYY" firstAttribute="top" secondItem="QbD-Ny-bQR" secondAttribute="top" constant="41" id="7rd-wL-VYm"/>
+                            <constraint firstItem="QbD-Ny-bQR" firstAttribute="trailing" secondItem="v3a-Ys-UYY" secondAttribute="trailing" constant="22" id="nI7-3i-pPe"/>
+                            <constraint firstItem="v3a-Ys-UYY" firstAttribute="leading" secondItem="QbD-Ny-bQR" secondAttribute="leading" constant="23" id="pbK-9n-b5n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QbD-Ny-bQR"/>
                     </view>
@@ -432,11 +433,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6m-fT-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044.375" y="-1198.943661971831"/>
+            <point key="canvasLocation" x="1044.375" y="-927.46478873239437"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EGh-dP-5Np"/>
+        <segue reference="99T-vT-BCS"/>
         <segue reference="Oad-ck-1hk"/>
     </inferredMetricsTieBreakers>
 </document>
