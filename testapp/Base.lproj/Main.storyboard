@@ -277,7 +277,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="바로가기"/>
                                 <connections>
-                                    <segue destination="LR4-B3-3bP" kind="show" id="yOz-JC-FKI"/>
+                                    <segue destination="ySf-OL-3Bk" kind="showDetail" id="Fy3-3u-Rg7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -294,7 +294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Joe-14-DIJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1263" y="-929"/>
+            <point key="canvasLocation" x="-1263.75" y="-929.57746478873241"/>
         </scene>
         <!--Input Name Controller-->
         <scene sceneID="7Sl-UK-uq3">
@@ -412,6 +412,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2c-Tg-azK">
+                                <rect key="frame" x="126" y="521" width="69" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <segue destination="ySf-OL-3Bk" kind="showDetail" id="AbU-fb-w3d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -422,6 +431,7 @@
                         <viewLayoutGuide key="safeArea" id="QbD-Ny-bQR"/>
                     </view>
                     <connections>
+                        <outlet property="nextbutton" destination="C2c-Tg-azK" id="Y8M-pj-07t"/>
                         <outlet property="noticText" destination="v3a-Ys-UYY" id="BK6-jH-jvK"/>
                         <outlet property="num1" destination="qCH-5V-30z" id="1k6-pX-pu1"/>
                         <outlet property="num2" destination="5Dx-vY-vbV" id="lsr-dt-hhw"/>
@@ -433,11 +443,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6m-fT-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044.375" y="-927.46478873239437"/>
+            <point key="canvasLocation" x="973" y="-930"/>
+        </scene>
+        <!--Fruitname View Controller-->
+        <scene sceneID="WwB-jB-2je">
+            <objects>
+                <viewController id="ySf-OL-3Bk" customClass="FruitnameViewController" customModule="testapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s8C-kI-alO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jZl-Zg-atx">
+                                <rect key="frame" x="36" y="69" width="252" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtV-eb-Hbe">
+                                <rect key="frame" x="54" y="421" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="사과"/>
+                                <connections>
+                                    <action selector="itemButton:" destination="ySf-OL-3Bk" eventType="touchUpInside" id="NZW-xK-YMY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="aPb-9D-7ks"/>
+                    </view>
+                    <connections>
+                        <outlet property="bnamebutton1" destination="AtV-eb-Hbe" id="SEB-2o-8hq"/>
+                        <outlet property="imageview" destination="jZl-Zg-atx" id="Zbm-4X-eZh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RDL-bs-IrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1680" y="-931.69014084507046"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="99T-vT-BCS"/>
+        <segue reference="Fy3-3u-Rg7"/>
         <segue reference="Oad-ck-1hk"/>
     </inferredMetricsTieBreakers>
 </document>
