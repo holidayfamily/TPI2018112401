@@ -13,13 +13,14 @@ class FruitnameViewController: UIViewController {
     @IBOutlet var imageview: UIImageView!
     var timer:Timer?
     var count = 1
-    let fruitimageDic = [1:"apple.png",2:"pear.png",3:"peach.png",4:"strawberry.png",5:"weathermelon.png",6:"plum.png",7:"orientalmelon.png",8:"orange.png"]
+    let fruitimageDic = [1:"apple.png",2:"pear.png",3:"peach.png",4:"strawberry.png",5:"weatermelon.png",6:"plum.png",7:"orientalmelon.png",8:"orange.png"]
     @IBAction func itemButton(_ sender: UIButton) {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         imageview.image = UIImage(named: "apple.png")
        bnamebutton1.isHidden = true
+        startTimer()
     }
     
     @IBOutlet weak var bnamebutton1: UIButton!
@@ -30,16 +31,16 @@ class FruitnameViewController: UIViewController {
     }
     
     func startTimer(){
-        self.timer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: "update", userInfo: nil, repeats: true)
+        self.timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(update), userInfo: nil, repeats: true)
     }
     
-    func update(){
-        //0.5초마다 반복
-        print("update")
-        
+    @objc func update(){
         count += 1
-        if(count > 10){
-            imageview.image = UIImage(named: fruitimageDic[count]!)
+        if(count < 9){
+            let imagename:String = fruitimageDic[count]!
+            imageview.image = UIImage(named: imagename)
+            
+        }else{
             self.stopTimer()
         }
     }
