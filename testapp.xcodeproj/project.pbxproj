@@ -15,6 +15,7 @@
 		196D67AD21A6DE7800661760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 196D67AB21A6DE7800661760 /* LaunchScreen.storyboard */; };
 		196D67B821A6DE7800661760 /* testappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196D67B721A6DE7800661760 /* testappTests.swift */; };
 		196D67C321A6DE7800661760 /* testappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196D67C221A6DE7800661760 /* testappUITests.swift */; };
+		1979F4F221F6CB120048C59B /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979F4F121F6CB120048C59B /* ViewController4.swift */; };
 		197BC6DB21B814040001D0B4 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 197BC6DA21B814040001D0B4 /* data.plist */; };
 		198DA42721ECCAE00081BAA9 /* FruitnameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198DA42621ECCAE00081BAA9 /* FruitnameViewController.swift */; };
 		19CDF22F21ACC5500020F578 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDF22E21ACC5500020F578 /* ViewController3.swift */; };
@@ -55,6 +56,7 @@
 		196D67BE21A6DE7800661760 /* testappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		196D67C221A6DE7800661760 /* testappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testappUITests.swift; sourceTree = "<group>"; };
 		196D67C421A6DE7800661760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1979F4F121F6CB120048C59B /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		197BC6DA21B814040001D0B4 /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		198DA42621ECCAE00081BAA9 /* FruitnameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitnameViewController.swift; sourceTree = "<group>"; };
 		19CDF22E21ACC5500020F578 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				19CDF23921B406980020F578 /* InputNameController.swift */,
 				197BC6DA21B814040001D0B4 /* data.plist */,
 				198DA42621ECCAE00081BAA9 /* FruitnameViewController.swift */,
+				1979F4F121F6CB120048C59B /* ViewController4.swift */,
 			);
 			path = testapp;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				19CDF23821B3C3C30020F578 /* RootViewController.swift in Sources */,
 				19F134FF21BFF84F00D6C19E /* NumberClick.swift in Sources */,
 				196D67A521A6DE7600661760 /* ViewController.swift in Sources */,
+				1979F4F221F6CB120048C59B /* ViewController4.swift in Sources */,
 				196D67A321A6DE7600661760 /* AppDelegate.swift in Sources */,
 				19CDF22F21ACC5500020F578 /* ViewController3.swift in Sources */,
 				19204B5921AA3806004480E0 /* ViewController2.swift in Sources */,

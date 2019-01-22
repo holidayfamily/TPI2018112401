@@ -45,7 +45,13 @@ class NumberClick: UIViewController {
             setnumValue()
             moviemotion()
         }else if(buttonCount==5){
-            if(rightAnswerCount == 4){
+            if(rightAnswerCount == 5){
+                let alertController = UIAlertController(title: "축하해요", message: "5번 정답을 맞추셨군요. 다음 단계로 이동하시고싶으시면 하단의  NEXT 버튼을 클릭해주세요", preferredStyle:.alert)
+                let alertbutton = UIAlertAction(title: "확인", style: .destructive) {
+                    (restult : UIAlertAction) -> Void in
+                }
+                alertController.addAction(alertbutton)
+                self.present(alertController,animated: true,completion: nil)
                 nextbutton.isHidden = false
             }
             rightAnswerCount += 1
