@@ -23,6 +23,7 @@ class FruitnameViewController: UIViewController {
     @IBOutlet weak var namebutton4: UIButton!
     @IBOutlet weak var namebutton5: UIButton!
     @IBOutlet weak var nextlevelbutton: UIButton!
+  //  var buttonObjectDic = [0:self.namebutton1,1:self.namebutton2,2:self.namebutton3,3:self.namebutton4,4:self.namebutton5]
     var clickcount:Int = 0
     var rightanswer:Int = 0
     
@@ -31,14 +32,16 @@ class FruitnameViewController: UIViewController {
         
         if(buttonname == fruitNameDic[imageValueArr[clickcount]]){
             if(clickcount == 4){
-                setdefault()
+                
                 rightanswer += 1
                 if(rightanswer == 1){
                     let alertController  = UIAlertController(title: "축하해요", message: "NEXT 버튼을 클릭해서 다음 스테이지로 갈까요?", preferredStyle: .alert)
                     let alertAction  = UIAlertAction(title: "확인", style: .destructive) { (result:UIAlertAction) -> Void in }
                     alertController.addAction(alertAction)
-                    self.present(alertController, animated: true, completion: nil)
+                    self.present(alertController, animated: true, completion: setdefault)
                     nextlevelbutton.isHidden = false
+                }else{
+                    setdefault()
                 }
             }else{
                 sender.isHidden = true
@@ -90,12 +93,13 @@ class FruitnameViewController: UIViewController {
         }else{
             self.timer?.invalidate()
             self.timer = nil
-            
-            namebutton1.setTitle(fruitNameDic[imageValueArr[0]], for: .normal)
-            namebutton2.setTitle(fruitNameDic[imageValueArr[1]], for: .normal)
-            namebutton3.setTitle(fruitNameDic[imageValueArr[2]], for: .normal)
-            namebutton4.setTitle(fruitNameDic[imageValueArr[3]], for: .normal)
-            namebutton5.setTitle(fruitNameDic[imageValueArr[4]], for: .normal)
+            var temp = imageValueArr
+            temp.shuffle()
+            namebutton1.setTitle(fruitNameDic[temp[0]], for: .normal)
+            namebutton2.setTitle(fruitNameDic[temp[1]], for: .normal)
+            namebutton3.setTitle(fruitNameDic[temp[2]], for: .normal)
+            namebutton4.setTitle(fruitNameDic[temp[3]], for: .normal)
+            namebutton5.setTitle(fruitNameDic[temp[4]], for: .normal)
             imageview.isHidden = true
             namebutton1.isHidden = false
             namebutton2.isHidden = false

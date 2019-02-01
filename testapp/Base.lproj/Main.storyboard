@@ -163,7 +163,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="NEXT"/>
                                 <connections>
-                                    <segue destination="LR4-B3-3bP" kind="show" id="99T-vT-BCS"/>
+                                    <segue destination="ySf-OL-3Bk" kind="showDetail" id="x3n-tN-LhM"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="한글로 나오는 글자와 써진 글자가 같으면 예 다르면 아니오 를 클릭하세요" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="MTE-dn-NYm">
@@ -418,7 +418,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="NEXT"/>
                                 <connections>
-                                    <segue destination="ySf-OL-3Bk" kind="showDetail" id="AbU-fb-w3d"/>
+                                    <segue destination="kVl-DU-b6K" kind="show" id="nA8-JQ-3Q7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -443,7 +443,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6m-fT-9W0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973" y="-930"/>
+            <point key="canvasLocation" x="1706" y="-930"/>
         </scene>
         <!--Fruitname View Controller-->
         <scene sceneID="WwB-jB-2je">
@@ -454,7 +454,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jZl-Zg-atx">
-                                <rect key="frame" x="36" y="69" width="252" height="250"/>
+                                <rect key="frame" x="40" y="114" width="240" height="232"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AtV-eb-Hbe">
@@ -503,13 +503,21 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ji-s4-JgD">
-                                <rect key="frame" x="123" y="517" width="68" height="30"/>
+                                <rect key="frame" x="123" y="503" width="69" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="NextLevel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="NEXT"/>
                                 <connections>
-                                    <segue destination="kVl-DU-b6K" kind="show" id="C9L-4I-Wwc"/>
+                                    <segue destination="LR4-B3-3bP" kind="showDetail" id="y7Y-R4-Ase"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="나오는 이미지 순서대로 버튼을 클릭하세요" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SxA-0A-yS6">
+                                <rect key="frame" x="25" y="43" width="264" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="aPb-9D-7ks"/>
@@ -526,7 +534,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RDL-bs-IrU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1680" y="-931.69014084507046"/>
+            <point key="canvasLocation" x="967.5" y="-927.46478873239437"/>
         </scene>
         <!--View Controller4-->
         <scene sceneID="3cD-Rj-0A8">
@@ -535,9 +543,65 @@
                     <view key="view" contentMode="scaleToFill" id="9tC-G0-NMP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zOj-Dq-b0O">
+                                <rect key="frame" x="50" y="88" width="240" height="232"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="나오는 이미지 이름을 클릭하세요." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Dj-Fn-VWl">
+                                <rect key="frame" x="38" y="28" width="264" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0u-TP-dWf">
+                                <rect key="frame" x="203" y="387" width="73" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="사과"/>
+                                <connections>
+                                    <action selector="clickname:" destination="kVl-DU-b6K" eventType="touchUpInside" id="ht9-cX-69z"/>
+                                    <action selector="itemButton:" destination="ySf-OL-3Bk" eventType="touchUpInside" id="vWk-Ud-TNV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJF-VG-g1b">
+                                <rect key="frame" x="122" y="387" width="73" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="사과"/>
+                                <connections>
+                                    <action selector="clickname:" destination="kVl-DU-b6K" eventType="touchUpInside" id="JEb-WW-X5k"/>
+                                    <action selector="itemButton:" destination="ySf-OL-3Bk" eventType="touchUpInside" id="WE7-qE-IQg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7C-pw-wui">
+                                <rect key="frame" x="126" y="480" width="69" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="NEXT"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuQ-lW-BAP">
+                                <rect key="frame" x="38" y="387" width="73" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="사과"/>
+                                <connections>
+                                    <action selector="clickname:" destination="kVl-DU-b6K" eventType="touchUpInside" id="pkg-dp-1ez"/>
+                                    <action selector="itemButton:" destination="ySf-OL-3Bk" eventType="touchUpInside" id="bHK-Q1-boh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8Rx-xw-DYe"/>
                     </view>
+                    <connections>
+                        <outlet property="button1" destination="EuQ-lW-BAP" id="6iH-tD-EJY"/>
+                        <outlet property="button2" destination="s0u-TP-dWf" id="qzk-bd-7Vn"/>
+                        <outlet property="button3" destination="iJF-VG-g1b" id="HkE-g2-mwO"/>
+                        <outlet property="imageview" destination="zOj-Dq-b0O" id="pbh-tJ-1yJ"/>
+                        <outlet property="nextbutton" destination="C7C-pw-wui" id="7gm-cK-4CY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGR-zN-cLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -545,7 +609,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="C9L-4I-Wwc"/>
+        <segue reference="nA8-JQ-3Q7"/>
         <segue reference="Oad-ck-1hk"/>
     </inferredMetricsTieBreakers>
 </document>
