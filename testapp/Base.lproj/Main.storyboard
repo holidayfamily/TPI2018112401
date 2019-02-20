@@ -239,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nZ-VX-BII" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-490" y="-30"/>
+            <point key="canvasLocation" x="-491" y="-213"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="tjm-Jy-DrZ">
@@ -249,46 +249,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrX-BF-Ip9">
-                                <rect key="frame" x="144" y="422" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrX-BF-Ip9">
+                                <rect key="frame" x="93" y="427" width="134" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="Uc5-nK-nPh" kind="show" id="Xfx-AI-FmZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOH-Lc-zJ3">
-                                <rect key="frame" x="118" y="413" width="139" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="연습을 시작해 볼까요?&quot;"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="5We-0q-SxA"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="안녕하세요. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ex-fA-WND">
-                                <rect key="frame" x="29" y="101" width="303" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안녕하세요. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ex-fA-WND">
+                                <rect key="frame" x="23" y="43" width="275" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tob-nR-AT4">
-                                <rect key="frame" x="161" y="192" width="52" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3p-sa-ECh">
+                                <rect key="frame" x="93" y="427" width="134" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="바로가기"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="kVl-DU-b6K" kind="show" id="5u3-UZ-Kxc"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Iwu-I8-r4B"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6ex-fA-WND" firstAttribute="leading" secondItem="6UV-66-fYu" secondAttribute="leading" constant="23" id="LTy-CI-qV6"/>
+                            <constraint firstItem="qrX-BF-Ip9" firstAttribute="leading" secondItem="6UV-66-fYu" secondAttribute="leading" constant="93" id="N2I-Uj-p6v"/>
+                            <constraint firstItem="6UV-66-fYu" firstAttribute="trailing" secondItem="6ex-fA-WND" secondAttribute="trailing" constant="22" id="Wb5-kL-2By"/>
+                            <constraint firstItem="6UV-66-fYu" firstAttribute="bottom" secondItem="qrX-BF-Ip9" secondAttribute="bottom" constant="105" id="YW5-Po-8XW"/>
+                            <constraint firstItem="6UV-66-fYu" firstAttribute="trailing" secondItem="qrX-BF-Ip9" secondAttribute="trailing" constant="93" id="h86-l3-nou"/>
+                            <constraint firstItem="6ex-fA-WND" firstAttribute="top" secondItem="6UV-66-fYu" secondAttribute="top" constant="23" id="qfK-sz-UnL"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6UV-66-fYu"/>
                     </view>
                     <navigationItem key="navigationItem" id="6Zh-0b-FXS"/>
                     <connections>
-                        <outlet property="directButton" destination="Tob-nR-AT4" id="oct-bR-Y3G"/>
                         <outlet property="inputNameButton" destination="qrX-BF-Ip9" id="glA-iQ-2iN"/>
-                        <outlet property="staratPractict" destination="lOH-Lc-zJ3" id="t6O-MI-QVE"/>
+                        <outlet property="nextPageButton" destination="J3p-sa-ECh" id="3WL-Kq-3BX"/>
                         <outlet property="userNaleLabel" destination="6ex-fA-WND" id="MJC-B6-rMa"/>
                     </connections>
                 </viewController>
@@ -545,18 +544,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zOj-Dq-b0O">
-                                <rect key="frame" x="50" y="88" width="240" height="232"/>
+                                <rect key="frame" x="40" y="188" width="240" height="232"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="나오는 이미지 이름을 클릭하세요." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="7Dj-Fn-VWl">
-                                <rect key="frame" x="38" y="28" width="264" height="71"/>
+                                <rect key="frame" x="28" y="128" width="264" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0u-TP-dWf">
-                                <rect key="frame" x="203" y="387" width="73" height="39"/>
+                                <rect key="frame" x="203" y="428" width="73" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="사과"/>
@@ -566,7 +565,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJF-VG-g1b">
-                                <rect key="frame" x="122" y="387" width="73" height="39"/>
+                                <rect key="frame" x="122" y="428" width="73" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="사과"/>
@@ -576,13 +575,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7C-pw-wui">
-                                <rect key="frame" x="126" y="480" width="69" height="27"/>
+                                <rect key="frame" x="126" y="521" width="69" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="NEXT"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuQ-lW-BAP">
-                                <rect key="frame" x="38" y="387" width="73" height="39"/>
+                                <rect key="frame" x="38" y="428" width="73" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="사과"/>
@@ -609,7 +608,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nA8-JQ-3Q7"/>
+        <segue reference="Xfx-AI-FmZ"/>
         <segue reference="Oad-ck-1hk"/>
     </inferredMetricsTieBreakers>
 </document>
