@@ -33,7 +33,9 @@ class ViewController4: UIViewController {
         button3.isHidden = true
 
         changeimage()
+
     }
+
     
     func changeimage(){
         imageValueArr.removeAll()
@@ -44,13 +46,15 @@ class ViewController4: UIViewController {
             }
             
         }
+        
         button1.setTitle(fruitNameDic[imageValueArr[0]], for: .normal)
         button2.setTitle(fruitNameDic[imageValueArr[1]], for: .normal)
-        button2.setTitle(fruitNameDic[imageValueArr[2]], for: .normal)
+        button3.setTitle(fruitNameDic[imageValueArr[2]], for: .normal)
         
         imageValueArr.shuffle()
         imageview.image = UIImage(named: fruitimageDic[imageValueArr[0]]!)
-       // setinterval(false)
+        Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(setinterval), userInfo: nil, repeats: false)
+
 
     }
     @IBAction func clickname(_ sender: UIButton) {
@@ -58,29 +62,27 @@ class ViewController4: UIViewController {
         
         if(buttonname == fruitNameDic[imageValueArr[0]]){
             rightanswer += 1
-            if(rightanswer == 1){
+            if(rightanswer == 3){
                 let alertController  = UIAlertController(title: "축하해요", message: "NEXT 버튼을 클릭해서 다음 스테이지로 갈까요?", preferredStyle: .alert)
                 let alertAction  = UIAlertAction(title: "확인", style: .destructive) { (result:UIAlertAction) -> Void in }
+                
                 alertController.addAction(alertAction)
                 self.present(alertController, animated: true, completion: changeimage)
                 nextbutton.isHidden = false
             }else{
+                setinterval(true)
                 changeimage()
+                
             }
         }else{
+            setinterval(true)
             changeimage()
+            
         }
     }
 
-    func setinterval(_ flag:Bool){
-        startTime = CFAbsoluteTimeGetCurrent()
-        var flag = true
-        while(flag){
-            let timeGab = CFAbsoluteTimeGetCurrent() - startTime
-            if(timeGab>5){
-                flag=false
-            }
-        }
+    @objc func setinterval(_ flag:Bool){
+        print(flag)
         imageview.isHidden = !flag
         button1.isHidden = flag
         button2.isHidden = flag
