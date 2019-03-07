@@ -82,7 +82,6 @@ class ViewController4: UIViewController {
     }
 
     @objc func setinterval(_ flag:Bool){
-        print(flag)
         imageview.isHidden = !flag
         button1.isHidden = flag
         button2.isHidden = flag
