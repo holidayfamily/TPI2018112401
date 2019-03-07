@@ -17,7 +17,7 @@ class RootViewController: UIViewController {
     @IBOutlet weak var nextPageButton: UIButton!
     
 
-    @IBOutlet var directButton: UIButton!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         nextPageButton.isHidden = true;

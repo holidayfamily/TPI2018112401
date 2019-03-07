@@ -12,6 +12,8 @@ import CoreFoundation
 class ViewController2: UIViewController {
 override func viewDidLoad() {
         super.viewDidLoad()
+        nextStepButton.isHidden =  true
+    
       //  nextStepButton.isHidden = true
 
     }
@@ -73,6 +75,8 @@ override func viewDidLoad() {
         }
         alertController.addAction(staylevel)
         self.present(alertController, animated: true, completion: nil)
+        nextStepButton.isHidden =  false
+
     }
 
 }
