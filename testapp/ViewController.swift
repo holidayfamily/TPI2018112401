@@ -8,12 +8,17 @@
 
 import UIKit
 import CoreFoundation
+import Foundation
 
 class ViewController: UIViewController {
     var startTime:CFAbsoluteTime = 0.0
     var countRightAnswer:Int = 0
     var bgcolorDic = [0:UIColor.white,1:UIColor.blue,2:UIColor.red,3:UIColor.yellow]
     @IBOutlet weak var textLable: UILabel!
+    
+   
+    
+
     override func viewDidLoad() {
         
         nextStepButton.isHidden = true
@@ -25,7 +30,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var nextStepButton: UIButton!
 
     @IBAction func clickButton(_ sender: UIButton) {
-        
+        let path = Bundle.main.path(forResource: "data", ofType:"plist")
+        let data = NSMutableDictionary(contentsOfFile: path!)
+      
+        var vistCount:Int = data?.value(forKey: "VistCount")as! Int
+
         let buttonid:Int = Int(sender.restorationIdentifier!)!
         var checkflag:Bool = false
         if(bgcolorDic[buttonid]==view.backgroundColor){

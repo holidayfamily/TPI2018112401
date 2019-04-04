@@ -3,8 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>Name</key>
-	<string>주윤령</string>
+	<string></string>
 	<key>VistCount</key>
 	<integer>0</integer>
+	<key>colorW</key>
+	<integer>1</integer>
+	<key>colorR</key>
+	<integer>3</integer>
+	<key>numberW</key>
+	<integer>1</integer>
+	<key>numberR</key>
+	<integer>5</integer>
+	<key>nameW</key>
+	<integer>1</integer>
+	<key>nameR</key>
+	<integer>7</integer>
+	<key>orderW</key>
+	<integer>1</integer>
+	<key>orderR</key>
+	<integer>9</integer>
 </dict>
 </plist>

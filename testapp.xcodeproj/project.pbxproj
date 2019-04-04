@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190412B92251BFB60081E00A /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190412B82251BFB60081E00A /* ViewController3.swift */; };
 		19204B5921AA3806004480E0 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19204B5821AA3806004480E0 /* ViewController2.swift */; };
 		196D67A321A6DE7600661760 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196D67A221A6DE7600661760 /* AppDelegate.swift */; };
 		196D67A521A6DE7600661760 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196D67A421A6DE7600661760 /* ViewController.swift */; };
@@ -18,7 +19,6 @@
 		1979F4F221F6CB120048C59B /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1979F4F121F6CB120048C59B /* ViewController4.swift */; };
 		197BC6DB21B814040001D0B4 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 197BC6DA21B814040001D0B4 /* data.plist */; };
 		198DA42721ECCAE00081BAA9 /* FruitnameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198DA42621ECCAE00081BAA9 /* FruitnameViewController.swift */; };
-		19CDF22F21ACC5500020F578 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDF22E21ACC5500020F578 /* ViewController3.swift */; };
 		19CDF23821B3C3C30020F578 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDF23721B3C3C30020F578 /* RootViewController.swift */; };
 		19CDF23A21B406980020F578 /* InputNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CDF23921B406980020F578 /* InputNameController.swift */; };
 		19F134FF21BFF84F00D6C19E /* NumberClick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F134FE21BFF84F00D6C19E /* NumberClick.swift */; };
@@ -42,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		190412B82251BFB60081E00A /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		19204B5821AA3806004480E0 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		196D679F21A6DE7600661760 /* testapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		196D67A221A6DE7600661760 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +60,6 @@
 		1979F4F121F6CB120048C59B /* ViewController4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		197BC6DA21B814040001D0B4 /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 		198DA42621ECCAE00081BAA9 /* FruitnameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitnameViewController.swift; sourceTree = "<group>"; };
-		19CDF22E21ACC5500020F578 /* ViewController3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		19CDF23721B3C3C30020F578 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		19CDF23921B406980020F578 /* InputNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputNameController.swift; sourceTree = "<group>"; };
 		19F134FE21BFF84F00D6C19E /* NumberClick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NumberClick.swift; path = images/NumberClick.swift; sourceTree = "<group>"; };
@@ -123,11 +123,11 @@
 				196D67A921A6DE7800661760 /* Assets.xcassets */,
 				196D67AB21A6DE7800661760 /* LaunchScreen.storyboard */,
 				19204B5821AA3806004480E0 /* ViewController2.swift */,
-				19CDF22E21ACC5500020F578 /* ViewController3.swift */,
 				19CDF23921B406980020F578 /* InputNameController.swift */,
 				197BC6DA21B814040001D0B4 /* data.plist */,
 				198DA42621ECCAE00081BAA9 /* FruitnameViewController.swift */,
 				1979F4F121F6CB120048C59B /* ViewController4.swift */,
+				190412B82251BFB60081E00A /* ViewController3.swift */,
 			);
 			path = testapp;
 			sourceTree = "<group>";
@@ -291,11 +291,11 @@
 			files = (
 				198DA42721ECCAE00081BAA9 /* FruitnameViewController.swift in Sources */,
 				19CDF23821B3C3C30020F578 /* RootViewController.swift in Sources */,
+				190412B92251BFB60081E00A /* ViewController3.swift in Sources */,
 				19F134FF21BFF84F00D6C19E /* NumberClick.swift in Sources */,
 				196D67A521A6DE7600661760 /* ViewController.swift in Sources */,
 				1979F4F221F6CB120048C59B /* ViewController4.swift in Sources */,
 				196D67A321A6DE7600661760 /* AppDelegate.swift in Sources */,
-				19CDF22F21ACC5500020F578 /* ViewController3.swift in Sources */,
 				19204B5921AA3806004480E0 /* ViewController2.swift in Sources */,
 				19CDF23A21B406980020F578 /* InputNameController.swift in Sources */,
 			);

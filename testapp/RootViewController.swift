@@ -15,8 +15,6 @@ class RootViewController: UIViewController {
     @IBOutlet var inputNameButton: UIButton!
     
     @IBOutlet weak var nextPageButton: UIButton!
-    
-
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,24 +33,21 @@ class RootViewController: UIViewController {
             inputNameButton.setTitle("이름등록" , for: .normal)
             inputNameButton.isHidden = false;
         }else{
+                userNaleLabel.text = "\(name)님 안녕하세요. 시작해볼까요?"
             
-            if(vistCount == 0){
-                userNaleLabel.text = "\(name)님 안녕하세요.처음 오셨군요 시작해볼까요?"
-            }else{
-                
                 vistCount += 1
                 
                 data?.setValue(vistCount, forKey: "vistCount")
                 data?.write(toFile: path!, atomically: true)
-                userNaleLabel.text = "\(name)님 안녕하세요. \(vistCount)번째 훈련입니다."
-            }
             
-            inputNameButton.isHidden = true;
+            
+            
+           inputNameButton.isHidden = true;
            nextPageButton.isHidden = false
         }
 
     }
-    @objc func nextView(){
+    func nextView(){
         let view = ViewController()
         present(view, animated: true, completion: nil)
     }
