@@ -31,10 +31,12 @@ class FruitnameViewController: UIViewController {
          let buttonname:String = sender.currentTitle!
         
         if(buttonname == fruitNameDic[imageValueArr[clickcount]]){
+            setdata("nameR")
             if(clickcount == 4){
                 
                 rightanswer += 1
                 if(rightanswer == 1){
+                    
                     let alertController  = UIAlertController(title: "축하해요", message: "NEXT 버튼을 클릭해서 다음 스테이지로 갈까요?", preferredStyle: .alert)
                     let alertAction  = UIAlertAction(title: "확인", style: .destructive) { (result:UIAlertAction) -> Void in }
                     alertController.addAction(alertAction)
@@ -49,6 +51,7 @@ class FruitnameViewController: UIViewController {
             }
 
         }else{
+            setdata("nameW")
             let alertController = UIAlertController(title: "이런", message: "다시한번 해볼까요?", preferredStyle: .alert)
             let alertbutton = UIAlertAction(title: "확인", style: .destructive) { (result:UIAlertAction) ->  Void in }
             alertController.addAction(alertbutton)
@@ -116,9 +119,17 @@ class FruitnameViewController: UIViewController {
             if(!imageValueArr.contains(numValue)){
                 imageValueArr.append(numValue)
             }
-            
         }
+    }
+    
+    func setdata(_ buttonname:String){
+        let path = Bundle.main.path(forResource: "data", ofType:"plist")
+        let data = NSMutableDictionary(contentsOfFile: path!)
+        
+        var countnum:Float = data?.value(forKey: buttonname)as! Float
+        countnum += 1
+        data?.setValue(countnum, forKey: buttonname)
+        data?.write(toFile: path!, atomically: true)
         
     }
-
 }

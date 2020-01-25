@@ -33,22 +33,31 @@ class RootViewController: UIViewController {
             inputNameButton.setTitle("이름등록" , for: .normal)
             inputNameButton.isHidden = false;
         }else{
-                userNaleLabel.text = "\(name)님 안녕하세요. 시작해볼까요?"
+            userNaleLabel.text = "\(name)님 안녕하세요. 시작해볼까요?"
             
-                vistCount += 1
+            vistCount += 1
                 
-                data?.setValue(vistCount, forKey: "vistCount")
-                data?.write(toFile: path!, atomically: true)
+            data?.setValue(vistCount, forKey: "vistCount")
+            data?.write(toFile: path!, atomically: true)
             
-            
-            
-           inputNameButton.isHidden = true;
-           nextPageButton.isHidden = false
+            inputNameButton.isHidden = true;
+            nextPageButton.isHidden = false
         }
 
     }
     func nextView(){
         let view = ViewController()
         present(view, animated: true, completion: nil)
+    }
+    
+    func setdata(_ buttonname:String){
+        let path = Bundle.main.path(forResource: "data", ofType:"plist")
+        let data = NSMutableDictionary(contentsOfFile: path!)
+        
+        var countnum:Float = data?.value(forKey: buttonname)as! Float
+        countnum += 1
+        data?.setValue(countnum, forKey: buttonname)
+        data?.write(toFile: path!, atomically: true)
+        
     }
 }

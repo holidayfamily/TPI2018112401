@@ -61,6 +61,7 @@ class ViewController4: UIViewController {
         let buttonname:String = sender.currentTitle!
         
         if(buttonname == fruitNameDic[imageValueArr[0]]){
+            setdata("nameR")
             rightanswer += 1
             if(rightanswer == 3){
                 let alertController  = UIAlertController(title: "축하해요", message: "NEXT 버튼을 클릭해서 다음 스테이지로 갈까요?", preferredStyle: .alert)
@@ -75,6 +76,7 @@ class ViewController4: UIViewController {
                 
             }
         }else{
+            setdata("nameW")
             setinterval(true)
             changeimage()
             
@@ -87,6 +89,17 @@ class ViewController4: UIViewController {
         button2.isHidden = flag
         button3.isHidden = flag
 
+    }
+    
+    func setdata(_ buttonname:String){
+        let path = Bundle.main.path(forResource: "data", ofType:"plist")
+        let data = NSMutableDictionary(contentsOfFile: path!)
+        
+        var countnum:Float = data?.value(forKey: buttonname)as! Float
+        countnum += 1
+        data?.setValue(countnum, forKey: buttonname)
+        data?.write(toFile: path!, atomically: true)
+        
     }
 }
 

@@ -17,6 +17,7 @@ class ViewController3: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
                 let path = Bundle.main.path(forResource: "data", ofType:"plist")
                 let data = NSMutableDictionary(contentsOfFile: path!)
         

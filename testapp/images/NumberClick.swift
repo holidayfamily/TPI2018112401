@@ -33,7 +33,9 @@ class NumberClick: UIViewController {
     
     @IBAction func clicknum(_ sender: UIButton) {
         let buttonNum:String = sender.currentTitle!
-     
+        let path = Bundle.main.path(forResource: "data", ofType:"plist")
+        let data = NSMutableDictionary(contentsOfFile: path!)
+        
         if (Int(buttonNum) != numValueArr[buttonCount]){
            
             let alertController = UIAlertController(title: "이런", message: "다시 한번해볼까요?", preferredStyle:.alert)
@@ -42,6 +44,8 @@ class NumberClick: UIViewController {
             }
             alertController.addAction(alertbutton)
             self.present(alertController,animated: true,completion: nil)
+
+            setdata("orderW")
             setnumValue()
             moviemotion()
         }else if(buttonCount==5){
@@ -54,6 +58,7 @@ class NumberClick: UIViewController {
                 self.present(alertController,animated: true,completion: nil)
                 nextbutton.isHidden = false
             }
+            setdata("orderR")
             rightAnswerCount += 1
             setnumValue()
             moviemotion()
@@ -128,4 +133,15 @@ class NumberClick: UIViewController {
 
         numValueArr.sort()
      }
+    
+    func setdata(_ buttonname:String){
+        let path = Bundle.main.path(forResource: "data", ofType:"plist")
+        let data = NSMutableDictionary(contentsOfFile: path!)
+        
+        var countnum:Float = data?.value(forKey: buttonname)as! Float
+        countnum += 1
+        data?.setValue(countnum, forKey: buttonname)
+        data?.write(toFile: path!, atomically: true)
+        
+    }
 }

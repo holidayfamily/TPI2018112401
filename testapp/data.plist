@@ -7,20 +7,20 @@
 	<key>VistCount</key>
 	<integer>0</integer>
 	<key>colorW</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>colorR</key>
-	<integer>3</integer>
+	<integer>0</integer>
 	<key>numberW</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>numberR</key>
-	<integer>5</integer>
+	<integer>0</integer>
 	<key>nameW</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>nameR</key>
-	<integer>7</integer>
+	<integer>0</integer>
 	<key>orderW</key>
-	<integer>1</integer>
+	<integer>0</integer>
 	<key>orderR</key>
-	<integer>9</integer>
+	<integer>0</integer>
 </dict>
 </plist>

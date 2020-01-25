@@ -31,7 +31,7 @@ override func viewDidLoad() {
     @IBAction func checkanswer(_ sender: UIButton) {
         let buttonid:String = sender.restorationIdentifier!
         var mathValue:Bool = false
- 
+
         if(num1==num2){
             mathValue=true
         }
@@ -39,16 +39,21 @@ override func viewDidLoad() {
             if(mathValue){
                 commentText.text = "잘했어 다시한번 눌러봐"
                 countRightAnswer += 1
+                setdata("numberR")
+                
             }else{
                 commentText.text = "다시 눌러보자"
+                setdata("numberW")
             }
         }
         if(buttonid=="NO"){
             if(mathValue){
                 commentText.text = "다시 눌러보자"
+                setdata("numberW")
             }else{
                 commentText.text = "잘했어 다시한번 눌러봐"
                 countRightAnswer += 1
+                setdata("numberR")
             }
         }
         
@@ -76,6 +81,16 @@ override func viewDidLoad() {
         alertController.addAction(staylevel)
         self.present(alertController, animated: true, completion: nil)
         nextStepButton.isHidden =  false
+
+    }
+    func setdata(_ buttonname:String){
+        let path = Bundle.main.path(forResource: "data", ofType:"plist")
+        let data = NSMutableDictionary(contentsOfFile: path!)
+
+        var countnum:Float = data?.value(forKey: buttonname)as! Float
+        countnum += 1
+        data?.setValue(countnum, forKey: buttonname)
+        data?.write(toFile: path!, atomically: true)
 
     }
 

@@ -15,12 +15,8 @@ class ViewController: UIViewController {
     var countRightAnswer:Int = 0
     var bgcolorDic = [0:UIColor.white,1:UIColor.blue,2:UIColor.red,3:UIColor.yellow]
     @IBOutlet weak var textLable: UILabel!
-    
-   
-    
 
     override func viewDidLoad() {
-        
         nextStepButton.isHidden = true
         super.viewDidLoad()
         changeBackgroundColor()
@@ -30,11 +26,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var nextStepButton: UIButton!
 
     @IBAction func clickButton(_ sender: UIButton) {
-        let path = Bundle.main.path(forResource: "data", ofType:"plist")
-        let data = NSMutableDictionary(contentsOfFile: path!)
-      
-        var vistCount:Int = data?.value(forKey: "VistCount")as! Int
-
+        
+  
         let buttonid:Int = Int(sender.restorationIdentifier!)!
         var checkflag:Bool = false
         if(bgcolorDic[buttonid]==view.backgroundColor){
@@ -44,13 +37,14 @@ class ViewController: UIViewController {
         if(checkflag){
             textLable.text = "잘했어 다시한번 눌러봐"
             countRightAnswer += 1
+            setdata("colorR")
+
         }else{
+            setdata("colorW")
             textLable.text = "다시 눌러보자"
         }
         changeBackgroundColor()
     }
-    
-
     
     func changeBackgroundColor(){
         if(countRightAnswer > 4){
@@ -74,5 +68,16 @@ class ViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func setdata(_ buttonname:String){
+        let path = Bundle.main.path(forResource: "data", ofType:"plist")
+        let data = NSMutableDictionary(contentsOfFile: path!)
+        
+        var countnum:Float = data?.value(forKey: buttonname)as! Float
+        countnum += 1
+        data?.setValue(countnum, forKey: buttonname)
+        data?.write(toFile: path!, atomically: true)
+        
+    }
+
 }
 
